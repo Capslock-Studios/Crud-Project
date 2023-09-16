@@ -1,82 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Hecho por -->
-    <!-- Daniel Guevara Montilla -->
-    <!-- Tarea BIT -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap's CSS -->
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <style>
-        .ms-input{
-            border: none;
-            border-bottom: 2px solid gray;
-        }
-        .ms-input:focus{
-            outline: none;
-        }
-        a{
-            text-decoration: none;
-        }
-        a:hover{
-            text-decoration: underline;
-            color: gray;
-        }
-    </style>
-    <title>Sign in to your account</title>
+    <title>
+        TAE TRAX | The start to a good music career.
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="icon" href="favicon.png">
 </head>
+
 <body>
-    <!-- Page Container -->
-    <div class="bg-white d-flex justify-content-center align-items-center vh-100 vw-100">
-        <!-- Login Container -->
-        <div class="d-flex flex-column justify-content-center align-items-center gap-4" style="width:57%">
-            <!-- Top Container -->
-            <div class=" shadow bg-white d-flex flex-column gap-3 p-4 w-75">
-                <div class="d-flex flex-column gap-2 p-4">
-                    <div class="d-flex gap-2 fs-5 fw-light">
-                        <div style="background-image: url(732221.png); background-repeat: no-repeat; background-position: center; background-size:
-                        cover; width: 25px; height: 25px;"></div>Logo</div>
-<style>
-.red{
-color: #000;
-font-weight: 300}
-</style>
-                    <h3 class="fs-8 fw-bold">Sign In</h3><h5> to view document</h5>
-
-                    <input class="ms-input" type="email" placeholder="E-mail, phone, or Skype">
-                    <br>
-
-                    <input class="ms-input" type="password" placeholder="Password">
-
-                    <p class="fs-6 fw-light mt-3">No account? <a href="#">Create one!</a></p>
-
-                    <div class="d-flex gap-1 fs-6"><a href="#">Sign in with a security key </a><span class="material-symbols-outlined">
-                        help
-                        </span>
+    <div class="container" style="background-image: url(./static/images/tamara-bellis-68csPWTnafo-unsplash.jpg);">
+        <div class="nav">
+            <div class="menu" onclick="openNav()">
+                <div class="hamburger"></div>
+            </div>
+            <a href="index.html" style="text-decoration :none;">
+                <div class="logo">
+                    TRAX
+                </div>
+            </a>
+            <div class="cart">
+                <i class='bx bx-cart-alt'></i>
+            </div>
+        </div>
+        <div id="myNav" class="nav-overlay">
+            <div class="nav-overlay-content">
+                <a href="trader.html">Trade</a>
+                <a href="bookings.html">Gigs</a>
+                <a href="uMusic-Player-master/index.html">Music</a>
+                <a href="label.html">Record label</a>
+                <a href="wish.html">Wish list</a>
+                <a href="form/index.html">forms</a>
+            </div>
+        </div>
+        <div class="sci">
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-instagram-alt'></i>
+            <i class='bx bxl-youtube'></i>
+            <i class='bx bxl-twitter'></i>
+        </div>
+        <div class="fashion">
+            MUSIC
+        </div>
+        <a href="#" class="button">Sign up</a>
+        <div class="copyright">
+            Copyright (c) 2023 <a href="https://theartexperience.online/"
+                target="_blank">TAE TRAX</a>
+        </div>
+        <div class="slide-control">
+            <i class='bx bxs-right-arrow'></i>
+            <A class="hyper-text"></A>
+        </div>
+        <div class="overlay"></div>
+        <div class="col-5" style="z-index: 97;">
+            <div class="info">
+                <!-- info 1 -->
+                <div class="product-info">
+                    <h1>
+                        TRADE<span style="color: #e29f01;">MUSIC</span>
+                    </h1>
+                    <h1>
+                        <span style="color: #e29f01;">ROYA</span>LTIES
+                    </h1>
+                    
+                    <span>
+                        Collection 2023
+                    </span>
+                    
+                  <!----- <a class="btn" href="#" data-animation="fadeInUp" data-delay="800ms" 
+              data-wow-duration="500ms">Buy Now</a>-->
+                    <p>
+                        TAE-TRAX Is a platform created to give musicians and other creatives an opportunity to achieve 
+                        their desired musical goals without being ripped off by any gatekeepers. We do this by allowing 
+                        the public to invest in a musician’s career by buying royalties for the same price that a record label  would.
+                         The artist benefits by getting funding for their career and the investor makes money  through return on investments.
+                    </p>
+                </div>
+                <!-- end info 1 -->
+                <!-- info 2 -->
+                <div class="product-info">
+                    <h1>
+                        <span style="color: #e29f01;">make</span>a
+                    </h1>
+                    <h1>
+                        wish<span style="color: #e29f01;">list</span>
+                    </h1>
+                    <span>
+                        Collection 2020
+                    </span>
+                    <p>As an artist; when you upload your profile you get to make a wish-list by ticking through the boxes
+                         of the things that cover your dream career launch. This list is then evaluated using different 
+                         indicators from feedback from big brands in the industry like Somizi and other idols judges and 
+                         then their rating of your music is evaluated by our algorithm in conjunctions with how many clicks 
+                         you get in your music thus determining how much initial funds you will need for the royalties you
+                         have made available for investment.
+                    </p>
+                </div>
+                <!-- end info 2 -->
+                <!-- info 3 -->
+                <div class="product-info">
+                    <h1>
+                        <span style="color: #e29f01;">get</span>
+                    </h1>
+                    <h1>
+                        <span style="color: #e29f01;">Cash</span>Back!
+                    </h1>
+                    <span>
+                        Collection 2023
+                    </span>
+                    <p>
+                        Get cash back in booking percentages when you book an artist on a custom schedual.
+                    </p>
+                    
+                </div>
+                <!-- end info 3 -->
+                <!-- info 4 -->
+                <div class="product-info">
+                    <h1>
+                        <span style="color: #e29f01;">sign</span>artists
+                    </h1>
+                    <h1>
+                        <span style="color: #e29f01;">to</span>your<span style="color: #e29f01;">label</span>
+                    </h1>
+                    <span>
+                        Collection 2023
+                    </span>
+                    <p>
+                        As a record label, you can find talent in our platform and sign them based off of the data and 
+                        preferences they have written in their profile. We mearly act a middle man between the two parties.
+                       
+                    </p>
+                </div>
+                <!-- end info 4 -->
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="slider">
+                <div class="slide">
+                    <div class="img-holder"
+                        style="background-image: url(./static/images/dom-hill-nimElTcTNyY-unsplash.jpg);"></div>
+                </div>
+                <div class="slide">
+                    <div class="img-holder"
+                        style="background-image: url(./static/images/luobulinka-FO4mQZi1c0M-unsplash.jpg)">
                     </div>
                 </div>
-                <!---mind thee exit-->
-                <a href="#"><div class="d-flex justify-content-end">
-                    <button class=" btn btn-primary w-25">Sign In</button>
-
+                <div class="slide">
+                    <div class="img-holder"
+                        style="background-image: url(./static/images/dillon-kydd-gbbsmERXCUg-unsplash.jpg)"></div>
                 </div>
-                </a>
-            </div>
-            <!-- Bottom Container -->
-            <div class="shadow bg-white w-75 d-fle align-items-center">
-                <button type="button" class="btn btn-light w-100 d-flex align-items-center ps-5 fs-6 pt-3">
-                        <p class="d-flex gap-3"><span class="material-symbols-outlined">
-                        key
-                        </span> 
-                        Sign in options</p>
-                </button>
+                <div class="slide">
+                    <div class="img-holder"
+                        style="background-image: url(./static/images/laura-chouette-d7wSG9uPev4-unsplash.jpg)"></div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="bootstrap.min.js"></script>
+    <div class="product-info">
+        <h1>
+            TRADE<span style="color: #e29f01;">MUSIC</span>
+        </h1>
+        <h1>
+            <span style="color: #e29f01;">ROYA</span>LTIES
+        </h1>
+        <span>
+            Collection 2022
+        </span>
+        <p>
+            TAE-TRAX Is a platform created to give musicians and other creatives and opportunity to achieve
+            their desired musical goals with reduced risks. We give an opportunity to
+            the public to invest in a musicians career by buying royalties/roi.
+        </p>
+    </div>
+    <script src="./static/js/main.js"></script>
 </body>
+
 </html>
