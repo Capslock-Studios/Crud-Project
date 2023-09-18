@@ -65,7 +65,8 @@ setTimeout(() => {
     productInfos[productIndex].classList.add('active')
 }, 200);
 
-let slideControl = document.querySelector('.slide-control')
+//working on the side control today Siya!
+let slideControl = document.querySelector('.slide-control') 
 
 slideControl.onclick = (e) => {
     scrollSlide()
