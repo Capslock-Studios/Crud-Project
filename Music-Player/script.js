@@ -319,7 +319,7 @@ window.onload = () =>{
                                 </div>
                                 <div class="music-list__text">
                                     <h3 class="heading-3"> ${songs[i].name} </h3>
-                                    <p class="music-artist-name">  ${songs[i].artist} </p>
+                                    <p class="music-artist-name" style="">  ${songs[i].artist} </p>
                                 </div>
                             </div>`;
 
@@ -356,7 +356,7 @@ window.onload = () =>{
     })(DOMStrings,AnimationClass,getSongs);
 
 
-    // Music Contol Model 
+    // Music Control Model 
 
 
     const musicController = ((DOMStrings,getSongs) => {
