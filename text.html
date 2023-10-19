@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text File Writer and Reader with Search</title>
+</head>
+<body>
+    <h1>Text File Writer and Reader with Search</h1>
+
+    <h2>Enter Text:</h2>
+    <textarea id="textArea" rows="10" cols="40" placeholder="Enter your text here"></textarea>
+    <br>
+    <button id="saveButton">Save</button>
+    <br>
+    <button id="loadButton">Load Text from File</button>
+    <br>
+    <input id="searchInput" type="text" placeholder="Search Entries">
+    <br>
+    <div id="fileContents"></div>
+
+    <script>
+        var savedEntries = [];
+
+        document.getElementById("saveButton").addEventListener("click", function() {
+            var text = document.getElementById("textArea").value;
+
+            // Append the new data to savedEntries
+            savedEntries.push(text);
+
+            // Join the saved entries with line breaks
+            var newData = savedEntries.join("\n\n");
+
+            // Create a Blob from the text
+            var blob = new Blob([newData], { type: "text/plain" });
+
+            // Create an anchor element to trigger the save
+            var a = document.createElement("data.txt");
+
+            // Set the href to the relative path within the "data" folder
+            a.href = window.URL.createObjectURL(blob);
+
+        
+            // Trigger a click event on the anchor to save the data
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            document.getElementById("textArea").value = "";
+        });
+
+        document.getElementById("loadButton").addEventListener("click", function() {
+            var fileInput = document.createElement("input");
+            fileInput.type = "file";
+            fileInput.addEventListener("change", function() {
+                var file = fileInput.files[0];
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    var fileContents = event.target.result;
+                    savedEntries.push(fileContents);
+                    document.getElementById("fileContents").textContent = fileContents;
+                };
+                reader.readAsText(file);
+            });
+            fileInput.click();
+        });
+
+        document.getElementById("searchInput").addEventListener("input", function() {
+            var searchValue = this.value;
+            var filteredEntries = savedEntries.filter(function(entry) {
+                return entry.includes(searchValue);
+            });
+            var resultText = filteredEntries.join("\n\n");
+            document.getElementById("fileContents").textContent = resultText;
+        });
+    </script>
+</body>
+</html>

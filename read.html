@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text File Reader</title>
+</head>
+<body>
+    <h1>Text File Reader</h1>
+
+    <button id="showDataButton">Show Data from data.txt</button>
+    <div id="dataWindow"></div>
+
+    <script>
+        document.getElementById("showDataButton").addEventListener("click", function() {
+            // Create an XMLHttpRequest to fetch the data.txt content
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/data.txt', true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var text = xhr.responseText;
+                    var words = text.split(' ').slice(0, 5).join(' '); // Get the first 5 words
+                    document.getElementById("dataWindow").textContent = words;
+                }
+            };
+
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
